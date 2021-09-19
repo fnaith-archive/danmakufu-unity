@@ -1,0 +1,39 @@
+//関数のかき方例
+function nWayToPlayer(let nWayNum,let nWayInterval,let nWaySpeed,let nWayGraphic)
+{//自機方向へのnWay関数
+    //nWayNum：nWay
+    //nWayInterval：弾の間隔
+    //nWaySpeed：弾の速度
+    //nWayGraphic：弾の画像
+
+    let ex = 0;//ObjMove_GetX(objEnemy);
+    let ey = 0;//ObjMove_GetY(objEnemy);
+    let sAngle =- nWayInterval*/*int*/(nWayNum/2);
+    let eAngle = nWayInterval*/*int*/(nWayNum/2);
+    while(sAngle <= eAngle)
+    {
+        //CreateShotA1(ex, ey, nWaySpeed, sAngle, nWayGraphic, 30);
+        sAngle+=nWayInterval;
+    }
+}
+
+//関数の呼び出し例
+@MainLoop()
+{
+    let timer = 0;
+    let DS_RICE_S_RED = "0";
+    if(timer == 0)
+    {//関数呼び出し
+        //5Way、弾間隔10°、弾速5、画像BLUE11
+        nWayToPlayer(5, 10, 5, DS_RICE_S_RED);
+    }
+}
+//返り値の例
+function Double(let x)
+{
+    return x * 2;
+}
+
+//～～～
+
+let a = Double(10); //a = 20

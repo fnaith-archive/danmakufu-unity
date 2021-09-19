@@ -1,0 +1,38 @@
+@Initialize
+{
+    TWork();
+}
+
+@MainLoop
+{
+    //毎ループタスクを実行
+    yield;
+}
+
+//----------------------------------------------------
+//敵動作
+//----------------------------------------------------
+task TWork
+{
+    let frame = 0;
+    while(true)//!Obj_IsDeleted(objEnemy))
+    {
+        //敵が削除されるまで8フレーム毎に弾をだす。
+        let ex = 0;//ObjMove_GetX(objEnemy);
+        let ey = 0;//ObjMove_GetY(objEnemy);
+        if(frame % 8 == 0)
+        {
+            let i=0;
+            while(i<360)
+            {
+                //CreateShotA2(ex, ey, 7, i+frame,-0.4,4,DS_RICE_S_BLUE, 0);//弾を発射
+                i+=30;
+            }
+        }
+
+        frame++;
+
+        //他のタスクに制御を渡す。
+        yield;
+    }
+}

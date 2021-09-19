@@ -1,0 +1,24 @@
+//----TestA.txt----------------------------
+let valueA = 0;
+function FuncA()
+{
+    //～～～
+}
+
+
+//----TestB.txt----------------------------
+//TestA.txtを取り込みます。
+//「./」ではじめたパスはこのスクリプトからの相対パスになります。
+//「./」がない場合は、実行ファイルディレクトリからの相対パスになります。
+#include"./TestA.txt"
+
+function FuncB()
+{
+    //#includeでTestA.txtを取り込んでいるため
+    //valueAにアクセスできる。
+    let valueB = valueA;
+
+    //TestA.txtを取り込んでいるため
+    //FuncAを呼び出せる。
+    FuncA();
+}

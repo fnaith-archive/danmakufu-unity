@@ -1,0 +1,23 @@
+//サブルーチンのかき方例
+sub Shot5Way
+{//5WAYサブルーチン
+    let ex = 0;//ObjMove_GetX(objEnemy);
+    let ey = 0;//ObjMove_GetY(objEnemy);
+    let angle=-30;
+    while(angle<=30)
+    {//(angle=-30, -15, 0, 15, 30)
+        //CreateShotA1(ex, ey, 3, angle, DS_RICE_S_BLUE, 30);
+        angle+=15;
+    }
+}
+
+
+//サブルーチン呼び出し例
+@MainLoop()
+{
+    let timer = 0;
+    if(timer == 0)
+    {
+        //Shot5Way;//5WAYサブルーチン呼び出し
+    }
+}
