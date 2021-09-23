@@ -9,17 +9,12 @@ namespace Script
 
 class Block
 {
-    private int level;
     private int arguments;
     private string name;
     private Callback func;
     private List<Code> codes;
     private BlockKind kind;
-    public int Level
-    {
-        get => level;
-        set => level = value;
-    }
+    public int Level { get; set; }
     public int Arguments
     {
         get => arguments;

@@ -11,7 +11,7 @@ class BuildInOperation
 {
     public static Function[] Operations = {
         new Function("true", new Callback(true_), 0),
-        new Function("false_", new Callback(false_), 0),
+        new Function("false", new Callback(false_), 0),
         new Function("pi", new Callback(pi), 0),
         new Function("length", new Callback(length), 1),
         new Function("not", new Callback(not_), 1),
@@ -437,6 +437,7 @@ class BuildInOperation
         }
 
         Value result = argv[0];
+        Console.WriteLine(String.Format("{0}-{1}",argv[0].LengthAsArray(),argv[1].LengthAsArray()));
         result.Concatenate(argv[1]);
         return result;
     }

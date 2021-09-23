@@ -5,6 +5,7 @@ namespace Gstd
     
 namespace Script
 {
+
 class Body
 {
     private int refCount;

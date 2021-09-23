@@ -64,6 +64,8 @@ class Environment
     }
     public Environment()
     {
+        variables = new List<Value>();
+        stack = new List<Value>();
     }
 }
 

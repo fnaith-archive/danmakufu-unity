@@ -6,6 +6,7 @@ namespace Gstd
     
 namespace Script
 {
+
 class Value
 {
     private Body data;
@@ -114,6 +115,7 @@ class Value
         }
         foreach (Value v in x.data.ArrayValue)
         {
+            Console.WriteLine(v.AsReal());
             data.ArrayValue.Add(v);
         }
     }
@@ -219,7 +221,7 @@ class Value
     {
         return data.Type;
     }
-    public void overwrite(Value source)
+    public void Overwrite(Value source)
     {
         if (data == source.data)
         {
