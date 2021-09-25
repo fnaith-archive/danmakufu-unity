@@ -315,7 +315,7 @@ class Scanner
                 {
                     string error = "It's script does not allow to alone period\r\n";
                     //error += L"(�P�Ƃ̃s���I�h�͂��̃X�N���v�g�ł͎g���܂���)"; TODO fix
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 break;
             case '\'':
@@ -359,7 +359,7 @@ class Scanner
                         }
                         else
                         {
-                            throw new ParserException("???"); //TODO fix L"�����^�̒l�̒�����1�����ł�");
+                            throw new ParserError("???"); //TODO fix L"�����^�̒l�̒�����1�����ł�");
                         }
                     }
                 }
@@ -396,7 +396,7 @@ class Scanner
                             {
                                 string error = "There is a strange character.\r\n";
                                 //error += L"���ꕶ�����ςł�(�u\"...\"�v��Y��Ă��܂���)"; TODO fix
-                                throw new ParserException(error);
+                                throw new ParserError(error);
                             }
                     }
                 }

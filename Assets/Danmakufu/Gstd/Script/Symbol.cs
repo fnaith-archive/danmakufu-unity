@@ -1,31 +1,12 @@
 namespace Gstd
 {
-    
-namespace Script
-{
-
-class Symbol
-{
-    private int level;
-    private Block sub;
-    private int variable;
-    public int Level
+    namespace Script
     {
-        get => level;
-        set => level = value;
+        sealed class Symbol
+        {
+            public int Level { get; set; } // TODO remove field
+            public Block Sub { get; set; } // TODO remove field
+            public int Variable { get; set; } // TODO remove field
+        }
     }
-    public Block Sub
-    {
-        get => sub;
-        set => sub = value;
-    }
-    public int Variable
-    {
-        get => variable;
-        set => variable = value;
-    }
-}
-
-}
-
 }

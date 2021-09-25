@@ -2,64 +2,30 @@ using System.Collections.Generic;
 
 namespace Gstd
 {
-    
-namespace Script
-{
-
-class Body
-{
-    private int refCount;
-    private TypeData type;
-    private List<Value> arrayValue; // TODO lightweight_vector
-    // TODO union
-    private double realValue;
-    private char charValue;
-    private bool booleanValue;
-    public int RefCount
+    namespace Script
     {
-        get => refCount;
-        set => refCount = value;
+        sealed class Body
+        {
+            public int RefCount { get; set; } // TODO remove field
+            public TypeData Type { get; set; } // TODO remove set
+            public List<Value> ArrayValue { get; set; } // TODO remove set
+            // TODO union
+            public double RealValue { get; set; } // TODO remove set
+            public char CharValue { get; set; } // TODO remove set
+            public bool BooleanValue { get; set; } // TODO remove set
+            public Body()
+            {
+                ArrayValue = new List<Value>(); // TODO lazy init
+            }
+            public Body(Body source)
+            {
+                RefCount = source.RefCount;
+                Type = source.Type;
+                ArrayValue = source.ArrayValue;
+                RealValue = source.RealValue;
+                CharValue = source.CharValue;
+                BooleanValue = source.BooleanValue;
+            }
+        }
     }
-    public TypeData Type
-    {
-        get => type;
-        set => type = value;
-    }
-    public List<Value> ArrayValue
-    {
-        get => arrayValue;
-        set => arrayValue = value;
-    }
-    public double RealValue
-    {
-        get => realValue;
-        set => realValue = value;
-    }
-    public char CharValue
-    {
-        get => charValue;
-        set => charValue = value;
-    }
-    public bool BooleanValue
-    {
-        get => booleanValue;
-        set => booleanValue = value;
-    }
-    public Body()
-    {
-        arrayValue = new List<Value>();
-    }
-    public Body(Body source)
-    {
-        refCount = source.refCount;
-        type = source.type;
-        arrayValue = source.arrayValue;
-        realValue = source.realValue;
-        charValue = source.charValue;
-        booleanValue = source.booleanValue;
-    }
-}
-
-}
-
 }

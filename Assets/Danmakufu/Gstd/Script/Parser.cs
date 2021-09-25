@@ -64,10 +64,10 @@ class Parser
             {
                 string error = "Unable to be interpreted (Don't forget \";\"s).\r\n";
                 //error += L"(���߂ł��Ȃ����̂�����܂�(�u;�v��Y��Ă��܂���))"; TODO enable
-                throw new ParserException(error);
+                throw new ParserError(error);
             }
         }
-        catch (ParserException e)
+        catch (ParserError e)
         {
             error = true;
             errorMessage = e.Message;
@@ -143,7 +143,7 @@ class Parser
                                 {
                                     string error = "Functions and variables of the same name are declared in the same scope.\r\n";
                                     //error += L"(�����X�R�[�v�œ����̃��[�`���������錾����Ă��܂�)"; TODO enable
-                                    throw new ParserException(error);
+                                    throw new ParserError(error);
                                 }
                                 BlockKind kind = (type == TokenKind.TK_SUB || type == TokenKind.TK_at) ? BlockKind.BK_sub :
                                 ((type == TokenKind.TK_FUNCTION) ? BlockKind.BK_function : BlockKind.BK_microthread);
@@ -189,7 +189,7 @@ class Parser
                             {
                                 string error= "Variables of the same name are declared in the same scope.\r\n";
                                 //error += L"(�����X�R�[�v�œ����̕ϐ��������錾����Ă��܂�)"; TODO enable
-                                throw new ParserException(error);
+                                throw new ParserError(error);
                             }
                             Symbol s = new Symbol();
                             s.Level = level;
@@ -219,7 +219,7 @@ class Parser
         {
             string error = "\"(\" is nessasary.\r\n";
             //error += L"(\"(\"���K�v�ł�)"; TODO enable
-            throw new ParserException(error);
+            throw new ParserError(error);
         }
         lex.Advance();
 
@@ -229,7 +229,7 @@ class Parser
         {
             string error = "\")\" is nessasary.\r\n";
             //error += L"(\")\"���K�v�ł�)"; TODO enable
-            throw new ParserException(error);
+            throw new ParserError(error);
         }
         lex.Advance();
     }
@@ -264,7 +264,7 @@ class Parser
             {
                 string error = String.Format("{0} is not defined.\r\n", lex.Word);
                 //error += StringUtility::FormatToWide("(%s�͖���`�̎��ʎq�ł�)", lex.Word); TODO enable
-                throw new ParserException(error);
+                throw new ParserError(error);
             }
 
             lex.Advance();
@@ -275,7 +275,7 @@ class Parser
                 {
                     string error = "sub and task cannot call in the statement.\r\n";
                     //error += L"(sub��task�͎����ŌĂׂ܂���)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
 
                 int argc = ParseArguments(block);
@@ -286,7 +286,7 @@ class Parser
                         "{0} incorrect number of parameters. Check to make sure you have the correct number of parameters.\r\n", 
                         s.Sub.Name);
                     //error += StringUtility::FormatToWide("(%s�̈����̐����Ⴂ�܂�)", s->sub->name); TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
 
                 block.Codes.Add(new Code(lex.Line, CommandKind.PC_call_and_push_result, s.Sub, argc));
@@ -315,7 +315,7 @@ class Parser
             {
                 string error = "\"]\" is nessasary.\r\n";
                 //error += L"(\"]\"���K�v�ł�)"; TODO enable
-                throw new ParserException(error);
+                throw new ParserError(error);
             }
             lex.Advance();
         }
@@ -328,7 +328,7 @@ class Parser
             {
                 string error = "\"|\" is nessasary.\r\n";
                 //error += L"(\"|)\"���K�v�ł�)"; TODO enable
-                throw new ParserException(error);
+                throw new ParserError(error);
             }
             lex.Advance();
         }
@@ -340,7 +340,7 @@ class Parser
         {
             string error = "Invalid expression.\r\n";
             //error += L"(���Ƃ��Ė����Ȏ�������܂�)"; TODO enable
-            throw new ParserException(error);
+            throw new ParserError(error);
         }
     }
     private void ParseSuffix(Block block)
@@ -374,7 +374,7 @@ class Parser
                 {
                     string error = "\"]\" is nessasary.\r\n";
                     //error += L"(\"]\"���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 lex.Advance();
             }
@@ -435,7 +435,7 @@ class Parser
             {
                 string error = "Do you not mistake it for \"==\"?\r\n";
                 //error += L"(\"==\"�ƊԈႦ�Ă܂��񂩁H)"; TODO enable
-                throw new ParserException(error);
+                throw new ParserError(error);
             }
 
             case TokenKind.TK_e:
@@ -514,7 +514,7 @@ class Parser
             {
                 string error = "\")\" is nessasary.\r\n";
                 //error += L"(\")\"���K�v�ł�)"; TODO enable
-                throw new ParserException(error);
+                throw new ParserError(error);
             }
             lex.Advance();
         }
@@ -533,7 +533,7 @@ class Parser
                 { 
                     string error = String.Format("{0} is not defined.\r\n", lex.Word);
                     //eror += StringUtility::FormatToWide("(%s�͖���`�̎��ʎq�ł�)", lex.Word); TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 lex.Advance();
                 switch (lex.Next)
@@ -552,7 +552,7 @@ class Parser
                         {
                             string error = "\"]\" is nessasary.\r\n";
                             //error += L"(\"]\"���K�v�ł�)"; TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
                         lex.Advance();
                         WriteOperation(block, "index!", 2);
@@ -560,7 +560,7 @@ class Parser
                         {
                             string error = "\"=\" is nessasary.\r\n";
                             //error += L"(\"=\"���K�v�ł�)"; TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
                         lex.Advance();
                         ParseExpression(block);
@@ -623,7 +623,7 @@ class Parser
                         {
                             string error = "You cannot call a variable as if it were a function or a subroutine.\r\n";
                             //error += L"(�ϐ��͊֐���sub�̂悤�ɂ͌Ăׂ܂���)"; TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
 
                         int argc = ParseArguments(block);
@@ -633,7 +633,7 @@ class Parser
                             string error = String.Format("{0} incorrect number of parameters. Check to make sure you have the correct number of parameters.\r\n", 
                                 s.Sub.Name);
                             //error += StringUtility::FormatToWide("(%s�̈����̐����Ⴂ�܂�)", s->sub->name); TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
 
                         block.Codes.Add(new Code(lex.Line, CommandKind.PC_call, s.Sub, argc));
@@ -648,7 +648,7 @@ class Parser
                 {
                     string error = "Symbol name is nessasary.\r\n";
                     //error += L"(���ʎq���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
 
                 Symbol s = Search(lex.Word);
@@ -725,7 +725,7 @@ class Parser
                 {
                     string error = "\"(\" is nessasary.\r\n";
                     //error += L"(\"(\"���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 lex.Advance();
 
@@ -738,7 +738,7 @@ class Parser
                 {
                     string error = "The symbol name is nessasary.\r\n";
                     //error += L"(���ʎq���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
 
                 string s = lex.Word;
@@ -749,7 +749,7 @@ class Parser
                 {
                     string error = "\"in\" is nessasary.\r\n";
                     //error += L"(in���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 lex.Advance();
 
@@ -759,7 +759,7 @@ class Parser
                 {
                     string error = "\"..\" is nessasary.\r\n";
                     //error += L"(\"..\"���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 lex.Advance();
 
@@ -769,7 +769,7 @@ class Parser
                 {
                     string error = "\")\" is nessasary.\r\n";
                     //error += L"(\")\"���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
                 lex.Advance();
 
@@ -855,7 +855,7 @@ class Parser
                     {
                         string error = "\"(\" is nessasary.\r\n";
                         //error += L"(\"(\"���K�v�ł�)"; TODO enable
-                        throw new ParserException(error);
+                        throw new ParserError(error);
                     }
                     block.Codes.Add(new Code(lex.Line, CommandKind.PC_case_begin));
                     do
@@ -878,7 +878,7 @@ class Parser
                     {
                         string error = "\")\" is nessasary.\r\n";
                         //error += L"(\")\"���K�v�ł�)"; TODO enable
-                        throw new ParserException(error);
+                        throw new ParserError(error);
                     }
                     lex.Advance();
 
@@ -922,7 +922,7 @@ class Parser
                         {
                             string error = "\"return\" can call in function only.\r\n";
                             //error += L"(������function�̒��ł͂���܂���)"; TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
 
                         block.Codes.Add(new Code(lex.Line, CommandKind.PC_assign, s.Level, s.Variable));
@@ -944,7 +944,7 @@ class Parser
                 {
                     string error = "Symbol name is nessasary.\r\n";
                     //error += L"(���ʎq���K�v�ł�)"; TODO enable
-                    throw new ParserException(error);
+                    throw new ParserError(error);
                 }
 
                 Symbol s = Search(lex.Word);
@@ -955,7 +955,7 @@ class Parser
                     {
                         string error = "\"@\" cannot use in inner function and task.\r\n";
                         //error += L"(�C�x���g��[���K�w�ɋL�q���邱�Ƃ͂ł��܂���)"; TODO enable
-                        throw new ParserException(error);
+                        throw new ParserError(error);
                     }
                     events[s.Sub.Name] = s.Sub;
                 }
@@ -977,7 +977,7 @@ class Parser
                                 {
                                     string error = "Function parameter is nessasary.\r\n";
                                     //error += L"(���������K�v�ł�)"; TODO enable
-                                    throw new ParserException(error);
+                                    throw new ParserError(error);
                                 }
                             }
                             args.Add(lex.Word);
@@ -992,7 +992,7 @@ class Parser
                         {
                             string error = "\")\" is nessasary.\r\n";
                             //error += L"(\")\"���K�v�ł�)"; TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
                         lex.Advance();
                     }
@@ -1007,7 +1007,7 @@ class Parser
                         {
                             string error = "\")\" is nessasary.\r\n";
                             //error += L"(\")\"���K�v�c�Ƃ�����\"(\"�v���ł�)"; TODO enable
-                            throw new ParserException(error);
+                            throw new ParserError(error);
                         }
                         lex.Advance();
                     }
@@ -1063,7 +1063,7 @@ class Parser
         {
             string error = "Overwriting function does not allow to different argument count.\r\n";
             //error += L"(���Z�q�ɑΉ�����֐����㏑����`����܂����������̐����Ⴂ�܂�)"; TODO enable
-            throw new ParserException(error);
+            throw new ParserError(error);
         }
 
         block.Codes.Add(new Code(lex.Line, CommandKind.PC_call_and_push_result, s.Sub, clauses));
@@ -1080,7 +1080,7 @@ class Parser
         {
             string error = "\"{\" is nessasary.\r\n";
             //error += L"(\"{\"���K�v�ł�)"; TODO enable
-            throw new ParserException(error);
+            throw new ParserError(error);
         }
         lex.Advance();
 
@@ -1104,7 +1104,7 @@ class Parser
         {
             string error = "\"}\" is nessasary.\r\n";
             //error += L"(\"}\"���K�v�ł�)"; TODO enable
-            throw new ParserException(error);
+            throw new ParserError(error);
         }
         lex.Advance();
     }

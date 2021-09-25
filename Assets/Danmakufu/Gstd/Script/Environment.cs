@@ -2,73 +2,24 @@ using System.Collections.Generic;
 
 namespace Gstd
 {
-    
-namespace Script
-{
-
-class Environment
-{
-    private Environment pred;
-    private Environment succ;
-    private Environment parent;
-    private int refCount;
-    private Block sub;
-    private int ip;
-    private List<Value> variables;
-    private List<Value> stack;
-    private bool hasResult;
-    public Environment Pred
+    namespace Script
     {
-        get => pred;
-        set => pred = value;
+        sealed class Environment
+        {
+            public Environment Pred { get; set; } // TODO remove field
+            public Environment Succ { get; set; } // TODO remove field
+            public Environment Parent { get; set; } // TODO remove field
+            public int RefCount { get; set; } // TODO remove field
+            public Block Sub { get; set; } // TODO remove field
+            public int Ip { get; set; } // TODO remove field
+            public List<Value> Variables { get; set; } // TODO remove field
+            public List<Value> Stack { get; set; } // TODO remove field, use stack
+            public bool HasResult { get; set; } // TODO remove field
+            public Environment()
+            {
+                Variables = new List<Value>();
+                Stack = new List<Value>();
+            }
+        }
     }
-    public Environment Succ
-    {
-        get => succ;
-        set => succ = value;
-    }
-    public Environment Parent
-    {
-        get => parent;
-        set => parent = value;
-    }
-    public int RefCount
-    {
-        get => refCount;
-        set => refCount = value;
-    }
-    public Block Sub
-    {
-        get => sub;
-        set => sub = value;
-    }
-    public int Ip
-    {
-        get => ip;
-        set => ip = value;
-    }
-    public List<Value> Variables
-    {
-        get => variables;
-        set => variables = value;
-    }
-    public List<Value> Stack
-    {
-        get => stack;
-        set => stack = value;
-    }
-    public bool HasResult
-    {
-        get => hasResult;
-        set => hasResult = value;
-    }
-    public Environment()
-    {
-        variables = new List<Value>();
-        stack = new List<Value>();
-    }
-}
-
-}
-
 }

@@ -99,13 +99,13 @@ namespace cs
             try
             {
                 ScriptTypeManager typeManager = new ScriptTypeManager();
-                string source = System.IO.File.ReadAllText(filePath);
+                string source = readFunc(filePath);
                 Function[] funcv = {};
                 ScriptEngine engine = new ScriptEngine(typeManager, source, funcv);
                 if (engine.Error)
                 {
-                    Console.WriteLine("FAIL  : {0}", filePath);
-                    Console.WriteLine("\tLine {0} : {1}", engine.ErrorLine, engine.ErrorMessage);
+                    logErrorFunc(String.Format("FAIL  : {0}", filePath));
+                    logErrorFunc(String.Format("\tLine {0} : {1}", engine.ErrorLine, engine.ErrorMessage));
                 }
                 else
                 {
@@ -113,12 +113,12 @@ namespace cs
                     machine.Run();
                     if (machine.Error)
                     {
-                        Console.WriteLine("FAIL  : {0}", filePath);
-                        Console.WriteLine("\tLine {0} : {1}", machine.ErrorLine, machine.ErrorMessage);
+                        logErrorFunc(String.Format("FAIL  : {0}", filePath));
+                        logErrorFunc(String.Format("\tLine {0} : {1}", machine.ErrorLine, machine.ErrorMessage));
                     }
                     else
                     {
-                        Console.WriteLine("OK    : {0}", filePath);
+                        logFunc(String.Format("OK    : {0}", filePath));
                     }
                 }
             }

@@ -1,12 +1,7 @@
-using System;
-
 namespace Gstd
 {
-    
-namespace Script
-{
-delegate Value Callback(ScriptMachine machine, int argc, Value[] argv);
-
-}
-
+    namespace Script
+    {
+        delegate Value Callback(ScriptMachine machine, int argc, Value[] argv); // TODO remove argc ?
+    }
 }

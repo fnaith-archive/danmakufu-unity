@@ -1,39 +1,18 @@
-using System;
-
 namespace Gstd
 {
-    
-namespace Script
-{
-
-class Function
-{
-    private string name;
-    private Callback callback;
-    private int arguments;
-    public string Name
+    namespace Script
     {
-        get => name;
-        set => name = value;
+        sealed class Function
+        {
+            public string Name { get; set; } // TODO remove set
+            public Callback Callback { get; set; } // TODO remove set
+            public int Arguments { get; set; } // TODO remove set
+            public Function(string name, Callback callback, int arguments)
+            {
+                Name = name;
+                Callback = callback;
+                Arguments = arguments;
+            }
+        }
     }
-    public Callback Callback
-    {
-        get => callback;
-        set => callback = value;
-    }
-    public int Arguments
-    {
-        get => arguments;
-        set => arguments = value;
-    }
-    public Function(string name, Callback callback, int arguments)
-    {
-        this.name = name;
-        this.callback = callback;
-        this.arguments = arguments;
-    }
-}
-
-}
-
 }

@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{F5F9A09A-2F20-A248-B284-8ABCF3843CD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,7 +56,7 @@
   <ItemGroup>
     <Compile Include="Assets\Danmakufu\Gstd\Script\TokenKind.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\BuildInOperation.cs" />
-    <Compile Include="Assets\Danmakufu\Gstd\Script\ParserException.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\Script\ParserError.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Scope.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Scanner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\TypeData.cs" />

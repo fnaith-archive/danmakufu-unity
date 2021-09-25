@@ -2,24 +2,15 @@ using System.Collections.Generic;
 
 namespace Gstd
 {
-    
-namespace Script
-{
-
-class Scope : Dictionary<string, Symbol>
-{
-    private BlockKind kind;
-    public BlockKind Kind
+    namespace Script
     {
-        get => kind;
-        set => kind = value;
+        sealed class Scope : Dictionary<string, Symbol>
+        {
+            public BlockKind Kind { get; set; } // TODO remove field
+            public Scope(BlockKind kind)
+            {
+                Kind = kind;
+            }
+        }
     }
-    public Scope(BlockKind kind)
-    {
-        Kind = kind;
-    }
-}
-
-}
-
 }
