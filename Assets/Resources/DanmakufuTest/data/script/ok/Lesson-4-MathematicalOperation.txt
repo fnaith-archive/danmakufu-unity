@@ -1,0 +1,32 @@
+let x;
+x = 3 + 5; //x now holds the value 8
+assert(x == 8, "");
+x=x+3; //x now holds the value 11. Note that white space doesn't matter.
+assert(x == 11, "");
+x++; //This is equivalent to x = x + 1. It increments x by 1. Very helpful for counters.
+assert(x == 12, "");
+x--; //Like the above. Decrements the value of x by 1.
+assert(x == 11, "");
+let y = 6;
+assert(y == 6, "");
+y = y * 2; //y is now equal to 12.
+assert(y == 12, "");
+y = y / 3; //y is now equal to 4.
+assert(y == 4, "");
+y = y ^ 2; //y is raised to the second power and is now 16.
+assert(y == 16, "");
+y = y % 2; //Since the remainder/modulus when y / 2 = 0, y is now 0.
+assert(y == 0, "");
+
+let angleT = 30; //Danmakufu uses degrees
+assert(angleT == 30, "");
+angleT += 360/5; //angleT incremented by 72 and is now 102. 'var += n' is a shortcut for 'var = var + n'
+assert(angleT == 102, "");
+angleT *= -1; //angleT is now -102, using the same process as the line above. 
+assert(angleT == -102, "");
+//Mathematical shortcuts also exist in the form of -=, and /=
+x = (30 + angleT) * 3; //Use parentheses for order of operations. x now equals -216.
+assert(x == -216, "");
+
+y = 55 * 33; //This is the correct way to multiply the two numbers.
+assert(y == 1815, "");

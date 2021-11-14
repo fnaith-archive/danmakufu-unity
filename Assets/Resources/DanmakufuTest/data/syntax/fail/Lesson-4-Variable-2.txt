@@ -1,0 +1,1 @@
+x = 5; //This code tells the variable x to store the value 5.

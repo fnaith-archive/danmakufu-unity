@@ -1,0 +1,2 @@
+let x; //This code declares a variable called x.
+let x = 5; //Attempt to declare a variable x storing the value 5.

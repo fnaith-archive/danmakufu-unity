@@ -1,0 +1,4 @@
+sub fail {
+    assert(false, "");
+}
+fail;

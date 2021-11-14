@@ -5,6 +5,12 @@
     <TargetFramework>net5.0</TargetFramework>
     <BaseOutputPath>$(SolutionDir)../../Test/bin</BaseOutputPath>
     <BaseIntermediateOutputPath>$(SolutionDir)../../Test/obj</BaseIntermediateOutputPath>
+    <DefineConstants>
+      __TRACE_VALUE;__TRACE_COMMAND;__TRACE_TOKEN;__TRACE_FUNC;
+      _REPORT_INFO;__REPORT_OK;_REPORT_FAIL;
+      _WINDOWS;
+      __UNITY;
+    </DefineConstants>
   </PropertyGroup>
 
 </Project>

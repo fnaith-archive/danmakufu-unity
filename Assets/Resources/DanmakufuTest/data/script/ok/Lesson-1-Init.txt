@@ -1,0 +1,2 @@
+let str = "This is code in Danmakufu.";
+assert(str == "This is code in Danmakufu.", "");

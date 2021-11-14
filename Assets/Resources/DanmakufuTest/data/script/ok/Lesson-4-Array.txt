@@ -1,0 +1,56 @@
+let array = []; //Declare an empty array
+assert(length(array) == 0, "");
+let array2 = [3, 4, 6, 8]; //Declare an array of numbers of length 4 containing 3, 4, 6, and 8
+assert(length(array2) == 4, "");
+assert(array2[0] == 3, "");
+assert(array2[1] == 4, "");
+assert(array2[2] == 6, "");
+assert(array2[3] == 8, "");
+
+let array3 = [3, 6]; //Define an array of integers
+assert(length(array3) == 2, "");
+assert(array3[0] == 3, "");
+assert(array3[1] == 6, "");
+array3 = array3 ~ [4]; //array is now [3, 6, 4]
+assert(length(array3) == 3, "");
+assert(array3[0] == 3, "");
+assert(array3[1] == 6, "");
+assert(array3[2] == 4, "");
+
+let array4 = []; //Declare an empty array
+assert(length(array4) == 0, "");
+let element = "Test";
+array4 = array4 ~ [element]; //array is now [element], where the value of element is "Test"
+assert(length(array4) == 1, "");
+assert(array4[0] == "Test", "");
+
+let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of length 4 containing the names of Danmakufu Scripters
+let lengthdnh = length(dnh); //4
+assert(lengthdnh == 4, "");
+let scripter = dnh[2]; //Find the item with index 2 - "Trickysticks"
+assert(scripter == "Trickysticks", "");
+let scripter2 = dnh[2..4]; //Obtain an array with the 2 through 3rd indices of dnh - ["Trickysticks", "AJS"]
+assert(length(scripter2) == 2, "");
+assert(scripter2[0] == "Trickysticks", "");
+assert(scripter2[1] == "AJS", "");
+
+let array5 = [3, 6, 9, 12, 9, 9, 12];
+array5[4] = array5[4] - 1;
+assert(length(array5) == 7, "");
+assert(array5[0] == 3, "");
+assert(array5[1] == 6, "");
+assert(array5[2] == 9, "");
+assert(array5[3] == 12, "");
+assert(array5[4] == 8, "");
+assert(array5[5] == 9, "");
+assert(array5[6] == 12, "");
+
+let array6 = erase(array5, 5); //Erase fifth index of array 'array'
+assert(length(array5) == 7, "");
+assert(length(array6) == 6, "");
+assert(array6[0] == 3, "");
+assert(array6[1] == 6, "");
+assert(array6[2] == 9, "");
+assert(array6[3] == 12, "");
+assert(array6[4] == 8, "");
+assert(array6[5] == 12, "");

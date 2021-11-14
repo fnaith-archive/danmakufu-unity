@@ -1,0 +1,10 @@
+let x; //This code declares a variable called x.
+x = 5; //Now the value of x has been set to 5.
+assert(x == 5, "");
+x = 3; //The value of x has been overridden and is now 3.
+assert(x == 3, "");
+let y = x; //We have created a new variable y, whose current value is that of x, which is 3.
+assert(y == x, "");
+x = 4; //x is currently 4, but y maintains its value as 3.
+assert(x == 4, "");
+assert(y == 3, "");

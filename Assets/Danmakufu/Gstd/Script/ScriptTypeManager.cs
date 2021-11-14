@@ -4,52 +4,35 @@ namespace Gstd
 {
     namespace Script
     {
-        class ScriptTypeManager
+        sealed class ScriptTypeManager
         {
             private List<TypeData> types;
-            private TypeData realType;
-            private TypeData charType;
-            private TypeData booleanType;
-            private TypeData stringType;
-            public TypeData RealType
-            {
-                get => realType;
-            }
-            public TypeData CharType
-            {
-                get => charType;
-            }
-            public TypeData BooleanType
-            {
-                get => booleanType;
-            }
-            public TypeData StringType
-            {
-                get => stringType;
-            }
+            public TypeData RealType { get; }
+            public TypeData CharType { get; }
+            public TypeData BooleanType { get; }
+            public TypeData StringType { get; }
             public ScriptTypeManager()
             {
-                realType = new TypeData(TypeKind.TK_REAL);
-                charType = new TypeData(TypeKind.TK_CHAR);
-                booleanType = new TypeData(TypeKind.TK_BOOLEAN);
-                stringType = new TypeData(TypeKind.TK_ARRAY, charType);
+                RealType = new TypeData(TypeKind.tk_real);
+                CharType = new TypeData(TypeKind.tk_char);
+                BooleanType = new TypeData(TypeKind.tk_boolean);
+                StringType = new TypeData(TypeKind.tk_array, CharType);
                 types = new List<TypeData>();
-                types.Add(realType);
-                types.Add(charType);
-                types.Add(booleanType);
-                types.Add(stringType);
+                types.Add(RealType);
+                types.Add(CharType);
+                types.Add(BooleanType);
+                types.Add(StringType);
             }
-
             public TypeData GetArrayType(TypeData element)
             {
                 foreach (TypeData typeData in types)
                 {
-                    if (typeData.Kind == TypeKind.TK_ARRAY && typeData.Element == element)
+                    if (typeData.Kind == TypeKind.tk_array && typeData.Element == element)
                     {
                         return typeData;
                     }
                 }
-                TypeData type = new TypeData(TypeKind.TK_ARRAY, element);
+                TypeData type = new TypeData(TypeKind.tk_array, element);
                 types.Add(type);
                 return type;
             }

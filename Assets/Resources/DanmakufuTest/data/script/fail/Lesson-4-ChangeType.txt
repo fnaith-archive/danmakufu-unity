@@ -1,0 +1,4 @@
+let x = 6; //x is a container holding an integer 6
+let y = '$'; //y is a container holding the character $
+let z = '3'; //z is a container holding the character 3
+x = '3'; //This code will bring up an error

@@ -1,0 +1,2 @@
+let y = 30; 
+let z = x * y; //Will bring up an error since x has not been declared.

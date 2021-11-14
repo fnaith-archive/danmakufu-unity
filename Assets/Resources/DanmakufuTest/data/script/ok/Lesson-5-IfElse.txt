@@ -1,0 +1,20 @@
+let count = 40;
+if(count > 30) {
+    count = 0;
+}
+assert(count == 0, "");
+
+let x = 1;
+alternative(x)
+case(-3){
+    assert(false, "");
+}
+case(2){
+    assert(false, "");
+}
+case(10){
+    assert(false, "");
+}
+others{
+    //Do various stuff
+}

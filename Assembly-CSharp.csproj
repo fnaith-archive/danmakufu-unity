@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{F5F9A09A-2F20-A248-B284-8ABCF3843CD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -23,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2020_3_17;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2020_3_17;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;_REPORT_INFO;_REPORT_FAIL;_WINDOWS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -54,48 +53,105 @@
     <UnityVersion>2020.3.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Danmakufu\DotNetTeskRunner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\TokenKind.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\BuildInOperation.cs" />
-    <Compile Include="Assets\Danmakufu\Gstd\Script\ParserError.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Scope.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Scanner.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\Reader.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\ByteBuffer.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\Entry.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\TypeData.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptException.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\Writer.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Symbol.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\TokenType.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\ManagedFileReader.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Block.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptEngineData.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptFileLineMap.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Value.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\Script\ParserError.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Callback.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptEngineCache.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\ScriptMachine.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptCommonData.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\BuildInFunction.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\AccessType.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\StringUtility.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\FileType.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\CommandKind.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\ScriptTypeManager.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\Scanner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Function.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Environment.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\PathProperty.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\BlockKind.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\Token.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\FileManager.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\TypeKind.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Parser.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\File\FileReader.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\ScriptEngine.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Body.cs" />
     <Compile Include="Assets\Danmakufu\TestRunner.cs" />
+    <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptClientBase.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Code.cs" />
-    <Compile Include="Assets\Danmakufu\DotNetTeskRunner.cs" />
-    <Compile Include="Assets\UnityTestRunner.cs" />
+    <Compile Include="Assets\Danmakufu\test\Gstd\Script\ScriptMachineTest.cs" />
+    <Compile Include="Assets\Danmakufu\test\TestSuite.cs" />
+    <Compile Include="Assets\Danmakufu\test\Gstd\Script\ScriptEngineTest.cs" />
+    <Compile Include="Assets\Danmakufu\test\Gstd\GstdUtility\PathPropertyTest.cs" />
+    <Compile Include="Assets\Danmakufu\UnityTestRunner.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Resources\DanmakufuTest\syntax\SemicolonOnly.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Include.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\SampleA01.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\MicroThread.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Loop.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Branch.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Array.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\ExpressionsAndOperators.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\EmptyFile.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\LocalScope.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Comment.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\UserDefineFunction.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Statement.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Variable.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Escape.txt" />
-    <None Include="Assets\Resources\DanmakufuTest\syntax\Subroutine.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\ExpressionsAndOperators.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-4-ChangeType.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\LocalScope.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-LocalAndGlobalVariable.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Variable.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-MathematicalOperation-3.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-5.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Subroutine.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\SampleA01.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-Array.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-2.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-4-Array-2.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Task.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-3.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-5-Subroutine.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Array.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-Boolean.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\SemicolonOnly.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\UserDefineFunction.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Loop.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-Array-1.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\MicroThread.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-String.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-4-Array-1.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-Variable.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-Loop.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-MathematicalOperation-1.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\EmptyFile.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Escape.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-IfElse.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-1-Init.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-Variable-1.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-Comment.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-MathematicalOperation.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-MathematicalOperation-2.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Branch.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Statement.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Comment.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-Function.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-Variable-2.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-4.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-1.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-4-Array-3.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Include.txt" />
+    <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-Array-2.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

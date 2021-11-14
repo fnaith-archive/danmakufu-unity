@@ -1,0 +1,10 @@
+let x = 1;
+
+local {
+    let y = 2 * x;
+    ascent(i in 0..y){
+        let j = i + x/y;
+    }
+}
+
+x = i;

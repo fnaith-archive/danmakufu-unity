@@ -1,0 +1,2 @@
+let array = []; //Declare an empty array
+array = 999;

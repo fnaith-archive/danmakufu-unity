@@ -12,8 +12,8 @@ namespace Gstd
             public int RefCount { get; set; } // TODO remove field
             public Block Sub { get; set; } // TODO remove field
             public int Ip { get; set; } // TODO remove field
-            public List<Value> Variables { get; set; } // TODO remove field
-            public List<Value> Stack { get; set; } // TODO remove field, use stack
+            public List<Value> Variables { get; }
+            public List<Value> Stack { get; }
             public bool HasResult { get; set; } // TODO remove field
             public Environment()
             {

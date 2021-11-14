@@ -1,16 +1,26 @@
+using System;
 using System.Diagnostics;
 using System.Text;
+#if _TRACE_VALUE
+using System;
+#endif
 
 namespace Gstd
 {
     namespace Script
     {
-        sealed class Value // TODO prevent pass TypeData
+        sealed class Value : System.IDisposable// TODO prevent pass TypeData
         {
+#if _TRACE_VALUE
+            static int counter = 0;
+            public int id;
+#endif
             private Body data;
             public Value()
             {
-                data = null;
+#if _TRACE_VALUE
+                id = -1;
+#endif
             }
             public Value(TypeData t, double v)
             {
@@ -18,6 +28,9 @@ namespace Gstd
                 data.RefCount = 1;
                 data.Type = t;
                 data.RealValue = v;
+#if _TRACE_VALUE
+                id = counter++;
+#endif
             }
             public Value(TypeData t, char v)
             {
@@ -25,6 +38,9 @@ namespace Gstd
                 data.RefCount = 1;
                 data.Type = t;
                 data.CharValue = v;
+#if _TRACE_VALUE
+                id = counter++;
+#endif
             }
             public Value(TypeData t, bool v)
             {
@@ -32,6 +48,9 @@ namespace Gstd
                 data.RefCount = 1;
                 data.Type = t;
                 data.BooleanValue = v;
+#if _TRACE_VALUE
+                id = counter++;
+#endif
             }
             public Value(TypeData t, string v)
             {
@@ -42,21 +61,39 @@ namespace Gstd
                 {
                     data.ArrayValue.Add(new Value(t.Element, ch));
                 }
+#if _TRACE_VALUE
+                id = counter++;
+#endif
             }
             public Value(Value source)
             {
+#if _TRACE_VALUE
+                if (source.IsTarget())
+                {
+                    Console.WriteLine("V:Copy source " + source.id + "=" + source.AsString());
+                }
+                id = 10000 + source.id;
+#endif
                 data = source.data;
                 if (data != null)
                 {
                     ++(data.RefCount);
                 }
             }
-            ~Value() // TODO remove
+            public void Dispose()
             {
                 Release();
             }
-            public void Assign(Value source) // TODO use copy
+            public void CopyFrom(Value source)
             {
+#if _TRACE_VALUE
+                if (IsTarget() || source.IsTarget())
+                {
+                    Console.WriteLine("V:Assign this " + id + "=" + AsString());
+                    Console.WriteLine("V:Assign source " + source.id + "=" + source.AsString());
+                }
+                id = source.id;
+#endif
                 if (source.data != null)
                 {
                     ++(source.data.RefCount);
@@ -68,23 +105,47 @@ namespace Gstd
             {
                 return data != null;
             }
+#if _TRACE_VALUE
+            private bool IsTarget()
+            {
+                return false;//id == 10001;
+            }
+#endif
             public void Set(TypeData t, double v)
             {
                 Unique();
                 data.Type = t;
                 data.RealValue = v;
+#if _TRACE_VALUE
+                if (IsTarget())
+                {
+                    Console.WriteLine("V:set double " + AsString());
+                }
+#endif
             }
             public void Set(TypeData t, bool v)
             {
                 Unique();
                 data.Type = t;
                 data.BooleanValue = v;
+#if _TRACE_VALUE
+                if (IsTarget())
+                {
+                    Console.WriteLine("V:set bool " + AsString());
+                }
+#endif
             }
             public void Append(TypeData t, Value x)
             {
                 Unique();
                 data.Type = t;
                 data.ArrayValue.Add(x);
+#if _TRACE_VALUE
+                if (IsTarget())
+                {
+                    Console.WriteLine("V:Append " + AsString());
+                }
+#endif
             }
             public void Concatenate(Value x)
             {
@@ -94,6 +155,12 @@ namespace Gstd
                     data.Type = x.data.Type;
                 }
                 data.ArrayValue.AddRange(x.data.ArrayValue);
+#if _TRACE_VALUE
+                if (IsTarget())
+                {
+                    Console.WriteLine("V:Concatenate " + AsString());
+                }
+#endif
             }
             public double AsReal()
             {
@@ -103,12 +170,12 @@ namespace Gstd
                 }
                 switch (data.Type.Kind)
                 {
-                    case TypeKind.TK_REAL: return data.RealValue;
-                    case TypeKind.TK_CHAR: return data.CharValue;
-                    case TypeKind.TK_BOOLEAN: return data.BooleanValue ? 1 : 0;
-                    case TypeKind.TK_ARRAY:
+                    case TypeKind.tk_real: return data.RealValue;
+                    case TypeKind.tk_char: return data.CharValue;
+                    case TypeKind.tk_boolean: return data.BooleanValue ? 1 : 0;
+                    case TypeKind.tk_array:
                         double number;
-                        if (data.Type.Element.Kind == TypeKind.TK_CHAR && double.TryParse(AsString(), out number))
+                        if (data.Type.Element.Kind == TypeKind.tk_char && double.TryParse(AsString(), out number))
                         {
                             return number;
                         }
@@ -126,10 +193,10 @@ namespace Gstd
                 }
                 switch (data.Type.Kind)
                 {
-                    case TypeKind.TK_REAL: return (char) data.RealValue;
-                    case TypeKind.TK_CHAR: return data.CharValue;
-                    case TypeKind.TK_BOOLEAN: return data.BooleanValue ? '1' : '0';
-                    case TypeKind.TK_ARRAY: return '\0';
+                    case TypeKind.tk_real: return (char) data.RealValue;
+                    case TypeKind.tk_char: return data.CharValue;
+                    case TypeKind.tk_boolean: return data.BooleanValue ? '1' : '0';
+                    case TypeKind.tk_array: return '\0';
                     default:
                         Debug.Assert(false);
                         return '\0';
@@ -143,10 +210,10 @@ namespace Gstd
                 }
                 switch (data.Type.Kind)
                 {
-                    case TypeKind.TK_REAL: return data.RealValue != 0;
-                    case TypeKind.TK_CHAR: return data.CharValue != '\0';
-                    case TypeKind.TK_BOOLEAN: return data.BooleanValue;
-                    case TypeKind.TK_ARRAY: return data.ArrayValue.Count != 0;
+                    case TypeKind.tk_real: return data.RealValue != 0;
+                    case TypeKind.tk_char: return data.CharValue != '\0';
+                    case TypeKind.tk_boolean: return data.BooleanValue;
+                    case TypeKind.tk_array: return data.ArrayValue.Count != 0;
                     default:
                         Debug.Assert(false);
                         return false;
@@ -160,12 +227,12 @@ namespace Gstd
                 }
                 switch (data.Type.Kind)
                 {
-                    case TypeKind.TK_REAL: return data.RealValue.ToString();
-                    case TypeKind.TK_CHAR: return data.CharValue.ToString();
-                    case TypeKind.TK_BOOLEAN: return data.BooleanValue ? "true" : "false";
-                    case TypeKind.TK_ARRAY:
+                    case TypeKind.tk_real: return data.RealValue.ToString();
+                    case TypeKind.tk_char: return data.CharValue.ToString();
+                    case TypeKind.tk_boolean: return data.BooleanValue ? "true" : "false";
+                    case TypeKind.tk_array:
                         StringBuilder sb = new StringBuilder();
-                        if (data.Type.Element.Kind == TypeKind.TK_CHAR)
+                        if (data.Type.Element.Kind == TypeKind.tk_char)
                         {
                             foreach (Value v in data.ArrayValue)
                             {
@@ -195,12 +262,12 @@ namespace Gstd
             }
             public int LengthAsArray()
             {
-                Debug.Assert(data != null && data.Type.Kind == TypeKind.TK_ARRAY);
+                Debug.Assert(data != null && data.Type.Kind == TypeKind.tk_array);
                 return data.ArrayValue.Count;
             }
             public Value IndexAsArray(int i)
             {
-                Debug.Assert(data != null && data.Type.Kind == TypeKind.TK_ARRAY);
+                Debug.Assert(data != null && data.Type.Kind == TypeKind.tk_array);
                 Debug.Assert(i < data.ArrayValue.Count);
                 return data.ArrayValue[i];
             }
@@ -223,16 +290,30 @@ namespace Gstd
                     data = new Body(data);
                     data.RefCount = 1;
                 }
+#if _TRACE_VALUE
+                if (IsTarget())
+                {
+                    Console.WriteLine("V:Unique " + AsString());
+                }
+#endif
             }
             public void Overwrite(Value source)
             {
+#if _TRACE_VALUE
+                if (IsTarget() || source.IsTarget())
+                {
+                    Console.WriteLine("V:Overwrite this " + id + "=" + AsString());
+                    Console.WriteLine("V:Overwrite source " + source.id + "=" + source.AsString());
+                }
+                id = source.id;
+#endif
                 Debug.Assert(data != null);
                 if (data == source.data)
                 {
                     return;
                 }
                 Release();
-                data = source.data; // TODO check logic
+                data.Assign(source.data);
                 data.RefCount = 2;
             }
             private void Release() // TODO remove
@@ -240,7 +321,10 @@ namespace Gstd
                 if (data != null)
                 {
                     --(data.RefCount);
-                    data = null;
+                    if (data.RefCount == 0)
+                    {
+                        data = null;
+                    }
                 }
             }
         }

@@ -1,0 +1,22 @@
+//This is a comment.
+//Anything in Danmakufu that is preceded with two slashes (//) is a line comment.
+//Therefore, anything past a // on a line is not treated as code by Danmakufu and will be ignored.
+/*This is also a comment*/
+//Comments inside /* and */ are considered 'block comments'.
+/*Block
+comments
+can
+span
+multiple
+lines*/
+//Line comments are very good for providing descriptions of what certain code does.
+//Line comments are also very good for commenting out code that you don't want to use right now, such as debug code.
+/*Block Comments are useful for cutting out large chunks of code from execution 
+in order to test one part of a script.*/
+/*Block comments are also used to hold descriptive information about functions and the like*/
+/*Block and Line comments work exactly the same as in Java, C, C++, and JavaScript*/
+//assert(false, "");
+/*assert(false, "");*/
+/*
+assert(false, "");
+*/

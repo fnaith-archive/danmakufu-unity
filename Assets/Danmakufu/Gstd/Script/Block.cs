@@ -6,12 +6,12 @@ namespace Gstd
     {
         sealed class Block
         {
-            public int Level { get; set; } // TODO remove set
+            public int Level { get; }
             public int Arguments { get; set; } // TODO remove set
             public string Name { get; set; } // TODO remove set
             public Callback Func { get; set; } // TODO remove set
-            public List<Code> Codes { get; set; } // TODO remove set
-            public BlockKind Kind { get; set; } // TODO remove set
+            public List<Code> Codes { get; }
+            public BlockKind Kind { get; }
             public Block(int level, BlockKind kind)
             {
                 Level = level;

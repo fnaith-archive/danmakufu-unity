@@ -2,12 +2,12 @@ namespace Gstd
 {
     namespace Script
     {
-        enum TypeKind // TODO rename enums
+        enum TypeKind
         {
-            TK_REAL,
-            TK_CHAR,
-            TK_BOOLEAN,
-            TK_ARRAY
+            tk_real,
+            tk_char,
+            tk_boolean,
+            tk_array
         }
     }
 }

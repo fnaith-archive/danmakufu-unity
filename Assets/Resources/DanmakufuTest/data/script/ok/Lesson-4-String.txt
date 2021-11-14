@@ -1,0 +1,11 @@
+let randomstring = "This is a random string.";
+assert(randomstring == "This is a random string.", "");
+let spellname = "Fire and Water Sign \"Geysers of the Deep\"";
+assert(spellname == "Fire and Water Sign \"Geysers of the Deep\"", "");
+let imgRumia = "../" ~ "img/imgrumia.png";
+assert(imgRumia == "../img/imgrumia.png", "");
+let desc = "This is a spellcard made by an unknown scripter.[r]Please play at your own risk.";
+assert(desc == "This is a spellcard made by an unknown scripter.[r]Please play at your own risk.", "");
+
+let string = "String1" ~ "String2"; //string is now "String1String2"
+assert(string == "String1String2", "");

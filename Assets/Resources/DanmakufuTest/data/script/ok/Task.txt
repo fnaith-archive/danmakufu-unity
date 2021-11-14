@@ -1,0 +1,22 @@
+let a = [];
+task Add
+{
+    ascent(i in 0..90){
+        if ((i + 1) % 30 == 0) {
+            a = a ~ [0];
+        }
+        yield;
+    }
+}
+task Check
+{
+    ascent(i in 0..90){
+        if ((i + 1) % 30 == 0) {
+            assert(length(a) == (i + 1) / 30, "");
+        }
+        yield;
+    }
+}
+Add;
+Check;
+loop(90) {yield;}

@@ -1,0 +1,3 @@
+let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of length 4 containing the names of Danmakufu Scripters
+let lengthdnh = length(dnh); //4
+let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index does not exist

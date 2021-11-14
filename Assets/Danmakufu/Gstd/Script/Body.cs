@@ -15,9 +15,22 @@ namespace Gstd
             public bool BooleanValue { get; set; } // TODO remove set
             public Body()
             {
+                RefCount = 0;
                 ArrayValue = new List<Value>(); // TODO lazy init
+                RealValue = 0;
+                CharValue = '\0';
+                BooleanValue = false;
             }
             public Body(Body source)
+            {
+                RefCount = source.RefCount;
+                Type = source.Type;
+                ArrayValue = new List<Value>(source.ArrayValue); // TODO lazy init
+                RealValue = source.RealValue;
+                CharValue = source.CharValue;
+                BooleanValue = source.BooleanValue;
+            }
+            public void Assign(Body source)
             {
                 RefCount = source.RefCount;
                 Type = source.Type;

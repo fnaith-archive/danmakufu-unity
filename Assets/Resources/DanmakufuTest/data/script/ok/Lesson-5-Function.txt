@@ -1,0 +1,6 @@
+function math(x){
+    return x + 5;
+}
+
+let y = math(6); //y will be equal to 11
+assert(y == 11, "");

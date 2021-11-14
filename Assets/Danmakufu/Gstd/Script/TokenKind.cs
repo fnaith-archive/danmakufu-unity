@@ -2,15 +2,15 @@ namespace Gstd
 {
     namespace Script
     {
-        enum TokenKind // TODO rename enums
+        enum TokenKind
         {
-            TK_end, TK_invalid, TK_word, TK_real, TK_char, TK_string, TK_open_par, TK_close_par, TK_open_bra, TK_close_bra, TK_open_cur,
-            TK_close_cur, TK_open_abs, TK_close_abs, TK_comma, TK_semicolon, TK_tilde, TK_assign, TK_plus, TK_minus, TK_inc, TK_dec,
-            TK_asterisk, TK_slash, TK_percent, TK_caret, TK_e, TK_g, TK_ge, TK_l, TK_le, TK_ne, TK_exclamation, TK_ampersand,
-            TK_and_then, TK_vertical, TK_or_else, TK_at, TK_add_assign, TK_subtract_assign, TK_multiply_assign, TK_divide_assign,
-            TK_remainder_assign, TK_power_assign, TK_range, TK_ALTERNATIVE, TK_ASCENT, TK_BREAK, TK_CASE, TK_DESCENT, TK_ELSE,
-            TK_FUNCTION, TK_IF, TK_IN, TK_LET, TK_LOCAL, TK_LOOP, TK_OTHERS, TK_REAL, TK_RETURN, TK_SUB, TK_TASK,
-            TK_TIMES, TK_WHILE, TK_YIELD
+            tk_end, tk_invalid, tk_word, tk_real, tk_char, tk_string, tk_open_par, tk_close_par, tk_open_bra, tk_close_bra, tk_open_cur,
+            tk_close_cur, tk_open_abs, tk_close_abs, tk_comma, tk_semicolon, tk_tilde, tk_assign, tk_plus, tk_minus, tk_inc, tk_dec,
+            tk_asterisk, tk_slash, tk_percent, tk_caret, tk_e, tk_g, tk_ge, tk_l, tk_le, tk_ne, tk_exclamation, tk_ampersand,
+            tk_and_then, tk_vertical, tk_or_else, tk_at, tk_add_assign, tk_subtract_assign, tk_multiply_assign, tk_divide_assign,
+            tk_remainder_assign, tk_power_assign, tk_range, tk_ALTERNATIVE, tk_ASCENT, tk_BREAK, tk_CASE, tk_DESCENT, tk_ELSE,
+            tk_FUNCTION, tk_IF, tk_IN, tk_LET, tk_LOCAL, tk_LOOP, tk_OTHERS, tk_REAL, tk_RETURN, tk_SUB, tk_TASK,
+            tk_TIMES, tk_WHILE, tk_YIELD
         }
     }
 }
