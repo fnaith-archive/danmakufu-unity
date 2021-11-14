@@ -50,6 +50,7 @@ Currently under development, no useful thing here.
 
 # Line of Code in [GcProject](https://github.com/fnaith/danmakufu-ph3)
 
+## Test (cpp files)
 | Folder | Package | Lines |
 | --- | --- | ---: |
 | GcLib | | 42099 |
@@ -61,7 +62,19 @@ Currently under development, no useful thing here.
 | | DnhConfig | 1035 |
 | | DnhExecutor | 2951 |
 | | DnhViewer | 1905 |
-| FileArchiver | | 604 |
+
+## cplusplus_to_csharp (c# files)
+| Folder | Package | Lines |
+| --- | --- | ---: |
+| GcLib | | 42759 |
+| | gstd | 11501 |
+| | directx | 30731 |
+| | ext | 527 |
+| TouhouDanmakufu | | 26852 |
+| | Common | 20855 |
+| | DnhConfig | 1003 |
+| | DnhExecutor | 3124 |
+| | DnhViewer | 1870 |
 
 # Supported Function
 
