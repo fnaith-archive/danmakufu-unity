@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2020_3_17;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;_REPORT_INFO;_REPORT_FAIL;_WINDOWS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2020_3_17;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;_REPORT_INFO;_REPORT_FAIL;_WINDOWS;_UNITY;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -53,12 +53,10 @@
     <UnityVersion>2020.3.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Danmakufu\DotNetTeskRunner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\TokenKind.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\BuildInOperation.cs" />
+    <Compile Include="Assets\Danmakufu\test\Gstd\Script\ScriptEngineTest.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Scope.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Scanner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\File\Reader.cs" />
@@ -80,7 +78,9 @@
     <Compile Include="Assets\Danmakufu\Gstd\Script\ScriptMachine.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptCommonData.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\BuildInFunction.cs" />
+    <Compile Include="Assets\Danmakufu\UnityTestRunner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\File\AccessType.cs" />
+    <Compile Include="Assets\Danmakufu\test\TestSuite.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\StringUtility.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\File\FileType.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\CommandKind.cs" />
@@ -92,7 +92,9 @@
     <Compile Include="Assets\Danmakufu\Gstd\Script\BlockKind.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\GstdUtility\Token.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\File\FileManager.cs" />
+    <Compile Include="Assets\Danmakufu\test\Gstd\GstdUtility\PathPropertyTest.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\TypeKind.cs" />
+    <Compile Include="Assets\Danmakufu\test\Gstd\Script\ScriptMachineTest.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Parser.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\File\FileReader.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\ScriptEngine.cs" />
@@ -100,21 +102,53 @@
     <Compile Include="Assets\Danmakufu\TestRunner.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\ScriptClient\ScriptClientBase.cs" />
     <Compile Include="Assets\Danmakufu\Gstd\Script\Code.cs" />
-    <Compile Include="Assets\Danmakufu\test\Gstd\Script\ScriptMachineTest.cs" />
-    <Compile Include="Assets\Danmakufu\test\TestSuite.cs" />
-    <Compile Include="Assets\Danmakufu\test\Gstd\Script\ScriptEngineTest.cs" />
-    <Compile Include="Assets\Danmakufu\test\Gstd\GstdUtility\PathPropertyTest.cs" />
-    <Compile Include="Assets\Danmakufu\UnityTestRunner.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Asset\AssetLoader.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Graphic\BlendMode.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Input\InputListener.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Input\InputHandler.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Text\TextLoader.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Audio\UiPlayer.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Graphic\Camera.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Audio\MusicPlayer.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Audio\SfxPlayer.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Audio\AudioControl.cs" />
+    <Compile Include="Assets\Danmakufu\Port\File\FileAccesser.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Graphic\SpriteDrawer.cs" />
+    <Compile Include="Assets\Danmakufu\Util\Position.cs" />
+    <Compile Include="Assets\Danmakufu\Util\Color.cs" />
+    <Compile Include="Assets\Danmakufu\Util\RenderInfo.cs" />
+    <Compile Include="Assets\Adapter\Loader\UnityAudioLoader.cs" />
+    <Compile Include="Assets\Adapter\Loader\UnityShaderLoader.cs" />
+    <Compile Include="Assets\Adapter\Loader\UnityLoader.cs" />
+    <Compile Include="Assets\Adapter\Loader\UnitySpriteLoader.cs" />
+    <Compile Include="Assets\Adapter\Loader\UnityTextureLoader.cs" />
+    <Compile Include="Assets\Adapter\Manager\UnityTextureManager.cs" />
+    <Compile Include="Assets\Adapter\Manager\UnityAudioManager.cs" />
+    <Compile Include="Assets\Adapter\Manager\UnityShaderManager.cs" />
+    <Compile Include="Assets\Adapter\Manager\UnitySpriteManager.cs" />
+    <Compile Include="Assets\Danmakufu\Port\Graphic\SpriteParameter.cs" />
+    <Compile Include="Assets\Adapter\Text\UnityTextLoader.cs" />
+    <Compile Include="Assets\Adapter\File\UnityFileAccesser.cs" />
+    <Compile Include="Assets\Adapter\Asset\UnityAssetLoader.cs" />
+    <Compile Include="Assets\Adapter\Input\UnityInputHandler.cs" />
+    <Compile Include="Assets\Adapter\Audio\UnityMusicPlayer.cs" />
+    <Compile Include="Assets\Adapter\Audio\UnitySfxPlayer.cs" />
+    <Compile Include="Assets\Adapter\Audio\UnityAudioControl.cs" />
+    <Compile Include="Assets\Adapter\Audio\UnityUiPlayer.cs" />
+    <Compile Include="Assets\Adapter\Graphic\UnityCamera.cs" />
+    <Compile Include="Assets\Adapter\Graphic\UnitySpriteDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\ExpressionsAndOperators.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-4-ChangeType.txt" />
+    <None Include="Assets\Resources\Shader\Sprites-Diffuse-Blend.shader" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\LocalScope.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-LocalAndGlobalVariable.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Variable.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-MathematicalOperation-3.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-5.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Subroutine.txt" />
+    <None Include="Assets\Resources\Shader\Sprites-Diffuse-None.shader" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\SampleA01.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-Array.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-LocalAndGlobalVariable-2.txt" />
@@ -126,14 +160,17 @@
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-Boolean.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\SemicolonOnly.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\UserDefineFunction.txt" />
+    <None Include="Assets\Resources\Shader\Sprites-Diffuse-Add.shader" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Loop.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-Array-1.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\MicroThread.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-String.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\fail\Lesson-4-Array-1.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-4-Variable.txt" />
+    <None Include="Assets\Resources\Shader\Sprites-Diffuse-Mul.shader" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-Loop.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\fail\Lesson-4-MathematicalOperation-1.txt" />
+    <None Include="Assets\Resources\Shader\Sprites-Custom-Shadow.shader" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\EmptyFile.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\syntax\ok\Escape.txt" />
     <None Include="Assets\Resources\DanmakufuTest\data\script\ok\Lesson-5-IfElse.txt" />
